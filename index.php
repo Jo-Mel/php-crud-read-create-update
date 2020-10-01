@@ -3,8 +3,16 @@ include __DIR__ . '/partials/templates/header.php';
 include __DIR__ . '/partials/home/server.php';
 
 ?>
-  <body>
+  
     <div class="container">
+      <?php
+      if(!empty($_GET['roomId'])) { 
+          $stanza_canc = $_GET['roomId']?>
+
+      <div class="alert bg-warning">
+        <?php echo "hai cancellato la stanza numero $stanza_canc"; ?>
+      </div>
+      <?php } ?>
       <table class="table">
         <thead>
           <tr>
@@ -35,5 +43,6 @@ include __DIR__ . '/partials/home/server.php';
         </tbody>
       </table>
     </div>
-  </body>
-</html>
+ <?php
+ include __DIR__ . '/partials/templates/footer.php';
+ ?>
