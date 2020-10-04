@@ -1,13 +1,11 @@
 <?php
 include __DIR__ . '/../database.php';
-
 include __DIR__ .'/../functions.php';
 
-
-if (empty($_POST['id'])) {
+if (empty($_GET['id'])) {
     die('nessun id');
 }
 
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-removeId($conn, 'stanze', $id, $basepath);
+$row = getId($conn, 'stanze', $id);

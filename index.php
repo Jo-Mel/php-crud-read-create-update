@@ -7,7 +7,8 @@ include __DIR__ . '/partials/home/server.php';
     <div class="container">
       <?php
       if(!empty($_GET['roomId'])) { 
-          $stanza_canc = $_GET['roomId']?>
+          $stanza_canc = $_GET['roomId']
+      ?>
 
       <div class="alert bg-warning">
         <?php echo "hai cancellato la stanza numero $stanza_canc"; ?>
